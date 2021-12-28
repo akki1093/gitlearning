@@ -1,0 +1,57 @@
+<sly data-sly-use.obj = "com.boighor.core.models.HeaderBodyModel"/>
+<!-- Header -->
+<header id="wn__header" class="header__area header__absolute sticky__header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-6 col-lg-2" style="display: contents;">
+                <div class="logo">
+                    <a href="${properties.logoLInkURL}.html">
+                    <img src="${properties.logo}" alt="${properties.logoAlterTitle}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <nav class="mainmenu__nav">
+                    <ul class="meninmenu d-flex justify-content-start" data-sly-list.nav = "${obj.navList}">
+                        <sly data-sly-test.varName="${navList.index}"></sly>
+                        <sly data-sly-test="${nav.component == 'simple-list'}">
+                            <sly data-sly-resource="${varName @resourceType = '/apps/boighor/components/content/custom-component/simple-list'}"/>
+                        </sly>
+                        <sly data-sly-test="${nav.component == 'list-with-megamenu'}">
+                            <sly data-sly-resource="${varName @resourceType = '/apps/boighor/components/content/custom-component/list-with-megamenu'}"/>
+                        </sly>
+                        <sly data-sly-test="${nav.component == 'list-with-megamenu-dropdown'}">
+                            <sly data-sly-resource="${varName @resourceType = '/apps/boighor/components/content/custom-component/list-with-megamenu-dropdown'}"/>
+                        </sly>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-6 col-sm-6 col-6 col-lg-2">
+                <ul class="header__sidebar__right d-flex justify-content-end align-items-center" data-sly-list.sidebar = "${obj.headerSideBarList}">
+                    <sly data-sly-test.indexValue="${sidebarList.index}"></sly>
+                    <sly data-sly-test="${sidebar.component == 'shop_search'}">
+                        <li class="${sidebar.component}"><a class="search__active" href="#"></a></li>
+                    </sly>
+                    <sly data-sly-test="${sidebar.component == 'wishlist'}">
+                        <li class="${sidebar.component}"><a href="#"></a></li>
+                    </sly>
+                    <sly data-sly-test="${sidebar.component == 'shopcart'}">
+                        <li class="${sidebar.component}">
+                            <sly data-sly-resource="${indexValue @resourceType = '/apps/boighor/components/content/custom-component/shopcart'}"/>
+                        </li>
+                    </sly>
+                    <sly data-sly-test="${sidebar.component == 'setting__bar__icon'}">
+                        <li class="${sidebar.component}">
+                            <sly data-sly-resource="${indexValue @resourceType = '/apps/boighor/components/content/custom-component/setting'}"/>
+                        </li>
+                    </sly>
+                </ul>
+            </div>
+        </div>
+        <sly data-sly-resource="${'Mobile Menu' @resourceType = '/apps/boighor/components/content/custom-component/mobile-menu'}"/>
+        <div class="mobile-menu d-block d-lg-none">
+        </div>
+        <!-- Mobile Menu -->
+    </div>
+</header>
+<!-- //Header -->

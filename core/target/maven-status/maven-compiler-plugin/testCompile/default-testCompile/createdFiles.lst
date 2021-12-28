@@ -1,0 +1,5 @@
+com\boighor\core\listeners\SimpleResourceListenerTest.class
+com\boighor\core\servlets\SimpleServletTest.class
+com\boighor\core\filters\LoggingFilterTest.class
+com\boighor\core\models\HelloWorldModelTest.class
+com\boighor\core\schedulers\SimpleScheduledTaskTest.class

@@ -1,0 +1,22 @@
+<sly data-sly-use.obj = "com.boighor.core.models.MegaMenuDropDownModel"/>
+<li class="drop">
+    <a href="#">${obj.navTitle}</a>
+    <div class="megamenu dropdown">
+        <ul class="item item01" data-sly-list.listData = "${obj.megaMenuDropDownList}">
+			<sly data-sly-test="${listData.isParent != 'yes'}">
+              	<li><a href="${listData.navLInk}.html">${listData.navTitle}</a></li>
+            </sly>
+
+            <sly data-sly-test="${listData.isParent == 'yes'}">
+              	<li class="label2">
+                    <a href="${listData.navLInk}.html">${listData.navTitle}</a>
+                    <ul data-sly-list.subList = "${listData.megaMenuDropDownListData}">
+                        <li><a href="${subList.navMegaMenuDDLInk}.html">${subList.navMegaMenuDDTitle}</a></li>
+                    </ul>
+                </li>
+            </sly>
+
+        </ul>
+    </div>
+</li>
+

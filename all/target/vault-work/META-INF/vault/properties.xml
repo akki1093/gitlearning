@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>boighor - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="createdBy">D1</entry>
+<entry key="created">2021-11-11T11:20:28.119+05:30</entry>
+<entry key="groupId">com.boighor</entry>
+<entry key="name">com.boighor.boighor.all</entry>
+<entry key="description">All content package for boighor</entry>
+<entry key="artifactId">com.boighor.boighor.all</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="packageType">application</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">boighor</entry>
+</properties>

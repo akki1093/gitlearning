@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 16
+Created-By: 1.8.0_221 (Oracle Corporation)
+Bnd-LastModified: 1636722531311
+Bundle-Category: boighor
+Bundle-Description: "Core bundle for boighor"
+Bundle-ManifestVersion: 2
+Bundle-Name: boighor - Core
+Bundle-SymbolicName: com.boighor.boighor.core
+Bundle-Version: 1.0.0.20211112130851311
+Export-Package: com.boighor.core.filters;version="1.0";uses:="javax.serv
+ let",com.boighor.core.listeners;version="1.0";uses:="org.osgi.service.e
+ vent",com.boighor.core.models;version="1.0";uses:="javax.annotation,org
+ .apache.sling.api,org.apache.sling.api.resource,org.apache.sling.models
+ .annotations,org.apache.sling.models.annotations.injectorspecific",com.
+ boighor.core.schedulers;version="1.0",com.boighor.core.servlets;version
+ ="1.0";uses:="javax.servlet,org.apache.sling.api,org.apache.sling.api.s
+ ervlets"
+Import-Package: javax.annotation;version="0.0.0",com.boighor.core.filter
+ s;version="[1.0,2)",com.boighor.core.listeners;version="[1.0,2)",com.bo
+ ighor.core.schedulers;version="[1.0,2)",com.day.cq.search;version="[1.3
+ ,2)",com.day.cq.wcm.api;version="[1.27,2)",javax.inject;version="[1.0,2
+ )",javax.jcr;version="[2.0,3)",javax.jcr.query;version="[2.0,3)",javax.
+ servlet;version="[3.1,4)",org.apache.commons.io;version="[1.4,2)",org.a
+ pache.sling.api;version="[2.3,3)",org.apache.sling.api.request;version=
+ "[2.4,3)",org.apache.sling.api.resource;version="[2.11,3)",org.apache.s
+ ling.api.servlets;version="[2.2,3)",org.apache.sling.models.annotations
+ ;version="[1.5,2)",org.apache.sling.models.annotations.injectorspecific
+ ;version="[1.1,2)",org.apache.sling.settings;version="[1.3,2)",org.json
+ ;version="[20090211.0,20090212)",org.osgi.service.event;version="[1.3,2
+ )",org.slf4j;version="[1.7,2)"
+Private-Package: com.boighor.boighor.core.utils,com.boighor.core.service
+ s,com.boighor.core.services.impl,com.boighor.core.utils
+Provide-Capability: osgi.service;objectClass:List<String>="com.boighor.c
+ ore.services.Search",osgi.service;objectClass:List<String>="java.lang.R
+ unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter",o
+ sgi.service;objectClass:List<String>="javax.servlet.Servlet",osgi.servi
+ ce;objectClass:List<String>="org.osgi.service.event.EventHandler"
+Require-Capability: osgi.service;filter:="(objectClass=com.boighor.core.
+ services.Search)";effective:=active,osgi.service;filter:="(objectClass=
+ com.day.cq.search.QueryBuilder)";effective:=active,osgi.extender;filter
+ :="(&(osgi.extender=osgi.component)(version>=1.4.0)(!(version>=2.0.0)))
+ ",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.boighor.core.filters.LoggingFilter.xml,O
+ SGI-INF/com.boighor.core.listeners.SimpleResourceListener.xml,OSGI-INF/
+ com.boighor.core.schedulers.SimpleScheduledTask.xml,OSGI-INF/com.boigho
+ r.core.services.impl.BaseSearch.xml,OSGI-INF/com.boighor.core.servlets.
+ ContentFragmentQuery.xml,OSGI-INF/com.boighor.core.servlets.DownloadQue
+ ryResults.xml,OSGI-INF/com.boighor.core.servlets.GetProperties.xml,OSGI
+ -INF/com.boighor.core.servlets.GetTotalOffers.xml,OSGI-INF/com.boighor.
+ core.servlets.SearchOffers.xml,OSGI-INF/com.boighor.core.servlets.Simpl
+ eServlet.xml
+Sling-Model-Packages: com.boighor.core.models
+Tool: Bnd-4.2.0.201903051501
+

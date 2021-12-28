@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Best Seller Area"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title-1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Can not be empty"
+                                fieldLabel="Title-1"
+                                name="./title1"/>
+                            <title-2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Links the title. Path to a content page, external URL or page anchor."
+                                fieldLabel="Title-2"
+                                name="./title2"/>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Can not be empty"
+                                fieldLabel="Description"
+                                name="./description"/>
+                            <best-seller-list
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Best Seller Products">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./bestSellerProducts">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <image-1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Can not be empty"
+                                                    fieldLabel="Image-1"
+                                                    name="./image1"
+                                                    rootPath="/content/dam/boighor/images"/>
+                                                <image-2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Links the title. Path to a content page, external URL or page anchor."
+                                                    fieldLabel="Image-2"
+                                                    name="./image2"
+                                                    rootPath="/content/dam/boighor/images"/>
+                                                <hot-label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Select Icon"
+                                                    fieldLabel="Hot-label"
+                                                    name="./hotLabel">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <def
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Select Size"
+                                                            value=""/>
+                                                        <best-seller
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="BEST SALLER"
+                                                            value="BEST SALLER"/>
+                                                        <hot
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="HOT"
+                                                            value="HOT"/>
+                                                    </items>
+                                                </hot-label>
+                                                <product-title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Can not be empty"
+                                                    fieldLabel="Product Title"
+                                                    name="./productTitle"/>
+                                                <prize
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Can not be empty"
+                                                    fieldLabel="Prize"
+                                                    name="./prize"/>
+                                                <old-prize
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Can not be empty"
+                                                    fieldLabel="Old Prize"
+                                                    name="./oldPrize"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </best-seller-list>
+                        </items>
+                    </column>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

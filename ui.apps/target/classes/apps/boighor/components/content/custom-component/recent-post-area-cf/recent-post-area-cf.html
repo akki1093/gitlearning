@@ -1,0 +1,34 @@
+<sly data-sly-use.obj = "com.boighor.core.models.RecentPostAreaCFModel"/>
+<!-- Start Recent Post Area -->
+<section class="wn__recent__post bg--gray ptb--80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section__title text-center">
+                    <h2 class="title__be--2">${obj.title1} <span class="color--theme">${obj.title2}</span></h2>
+                    <p>${obj.description}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt--50" data-sly-list.blogList = "${obj.blogs}">
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="post__itam">
+                    <div class="content">
+                        <h3><a href="${blogList.path}.html">${blogList.title}</a></h3>
+                        <p>${blogList.description}</p>
+                        <div class="post__time">
+                            <span class="day">${blogList.date}</span>
+                            <div class="post-meta">
+                                <ul>
+                                    <li><a href="#"><i class="bi bi-love"></i>${blogList.likesCount}</a></li>
+                                    <li><a href="#"><i class="bi bi-chat-bubble"></i>${blogList.commentCount}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Recent Post Area -->

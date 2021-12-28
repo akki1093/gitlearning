@@ -1,0 +1,27 @@
+
+
+div.maindiv
+{
+max-width: 500px;
+height: 100%;
+position: absolute;
+top:20px;
+bottom: 0;
+left: 0;
+right: 0;
+margin:auto;
+}
+
+
+
+
+
+
+.results
+{
+height: 1900px;
+width: 100%;
+text-align:center;
+margin-top:500px;
+border-top:dotted black 3px;
+}

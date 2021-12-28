@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 16
+Created-By: 1.8.0_221 (Oracle Corporation)
+Bnd-LastModified: 1635161182838
+Bundle-Category: boighor
+Bundle-Description: "Bundles for Integration Tests for boighor"
+Bundle-ManifestVersion: 2
+Bundle-Name: boighor - Integration Tests Bundles
+Bundle-SymbolicName: com.boighor.boighor.it.tests
+Bundle-Version: 1.0.0.20211025112622837
+Export-Package: com.boighor.it.tests;version="1.0";uses:="org.apache.sli
+ ng.junit.annotations,org.junit,org.junit.runner"
+Import-Package: com.boighor.core.models;version="[1.0,2)",org.apache.sli
+ ng.api.resource;version="[2.11,3)",org.apache.sling.junit.annotations;v
+ ersion="[1.0,2)",org.apache.sling.settings;version="[1.3,2)",org.junit;
+ version="[4.8,5)",org.junit.runner;version="[4.8,5)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Sling-Test-Regexp: .*Test
+Tool: Bnd-4.2.0.201903051501
+

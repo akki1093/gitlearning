@@ -1,0 +1,8 @@
+
+#base=js
+vendor/modernizr-3.5.0.min.js
+vendor/jquery-3.2.1.min.js
+popper.min.js
+bootstrap.min.js
+plugins.js
+active.js

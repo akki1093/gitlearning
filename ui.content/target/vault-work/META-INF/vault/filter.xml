@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/boighor" mode="merge"/>
+    <filter root="/content/boighor" mode="merge"/>
+    <filter root="/content/dam/boighor" mode="merge"/>
+    <filter root="/content/experience-fragments/boighor" mode="merge"/>
+</workspaceFilter>

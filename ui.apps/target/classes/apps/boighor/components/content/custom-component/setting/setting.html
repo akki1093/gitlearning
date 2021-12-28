@@ -1,0 +1,26 @@
+<sly data-sly-use.obj = "com.boighor.core.models.SettingsModel"/>
+<a class="setting__active" href="#"></a>
+<div class="searchbar__content setting__block">
+    <div class="content-inner" data-sly-list.settingsData = "${obj.settingsContentList}">
+        <div class="switcher-currency">
+            <strong class="label switcher-label">
+            <span>${settingsData.title}</span>
+            </strong>
+            <div class="switcher-options">
+                <div class="switcher-currency-trigger">
+                    <sly data-sly-test = "${settingsData.isSettingMenu != 'yes'}">
+                        <span class="currency-trigger">${settingsData.subTitle}</span>
+                        <ul class="switcher-dropdown" data-sly-list.ddList = "${settingsData.switcherDropdownList}">
+                            <li>${ddList.dropDownData}</li>
+                        </ul>
+                    </sly>
+                    <sly data-sly-test = "${settingsData.isSettingMenu == 'yes'}">
+                    <div class="setting__menu" data-sly-list.ddList = "${settingsData.switcherDropdownList}">
+                        <span><a href="#">${ddList.dropDownData}</a></span>
+                    </div>
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

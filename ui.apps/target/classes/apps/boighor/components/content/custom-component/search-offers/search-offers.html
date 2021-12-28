@@ -1,0 +1,101 @@
+<sly
+    data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientLib.all @ categories='boighor.Content.searchpage'}" data-sly-unwrap />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--MAIN DIV-->
+<div class="maindiv">
+
+    <!--BRAND TITLE-->
+    <select class="form-select form-select-sm mb-1" onfocus="getDDList('brandTitle')" id="brandTitle" value = "Brand Title">
+        <option selected hidden value="">select brand</option>
+    </select>
+
+
+    <!-- FOR DESCRIPTION -->
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Description</span>
+        <input type="text" class="form-control" placeholder="Enter Description" name="description" id="description">
+    </div>
+
+
+    <!-- EXPIRY DATE -->
+    <h6>Exipry Date </h6>
+    <input type="datetime-local" id="expiryDate" name="expiryDate" step="1">
+
+
+    <!-- Offer Category -->
+    <br>
+    <select class="form-select form-select-sm mb-1" id="offerCategory" onfocus="getDDList('offerCategory')" >
+        <option selected hidden value="">Please select offer category</option>
+    </select>
+
+
+    <!-- FOR Offer TYPE -->
+    <br>
+    <select class="form-select form-select-sm mb-1" id="offerType" onfocus="getDDList('offerType')" >
+        <option selected hidden value="">Please select offer type</option>
+    </select>
+
+
+    <!-- BENEFIT TYPE -->
+    <br>
+    <select class="form-select form-select-sm mb-1" id="benefitType" onfocus="getDDList('benefitType')" >
+        <option selected hidden value="">Please select benefit type</option>
+    </select>
+
+
+    <!-- FOR Program ID -->
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Program ID</span>
+        <input type="text" class="form-control" placeholder="Program ID" name="programId" id = "programId">
+    </div>
+
+
+    <!-- FOR IMAGE TITLE -->
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Image Title</span>
+        <input type="text" class="form-control" placeholder="Image Title" name="imageTitle" id="imageTitle">
+    </div>
+
+
+    <!-- IS ACTIVE -->
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox"  id="isactive" name="isactive" checked>
+        <label class="form-check-label" for="isactive">
+        Is Active
+        </label>
+    </div>
+
+
+    <!-- IS BUNDLE -->
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox"  id="isbundle" name="isbundle">
+        <label class="form-check-label" for="isbundle">
+        Is Bundle
+        </label>
+    </div>
+
+
+    <!-- OFFER ID -->
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="offertype">Offer ID</span>
+        <input type="text" class="form-control" placeholder="Offer ID" id = "offerId" name="offerId">
+    </div>
+
+
+    <input type="button" id="btn" class="btn btn-lg btn-outline-danger" value="submit"  onclick="sendInfo()" >
+</div>
+
+
+<!--RESULTS DIV-->
+<div class="results">
+    <br>
+    <h3>SEARCH RESULTS</h3>
+    <input type="button"  class="btn btn-lg btn-outline-danger" name="Download" value="Download" onclick="sendInfo1()"><br>
+    <span id="no-result"></span>
+    <table id="result">
+    </table>
+</div>

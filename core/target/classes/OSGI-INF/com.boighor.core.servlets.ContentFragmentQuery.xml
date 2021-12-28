@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boighor.core.servlets.ContentFragmentQuery">
+  <property name="sling.servlet.paths" type="String" value="/bin/cfquery"/>
+  <property name="service.description" type="String" value="Query Builder servlet"/>
+  <property name="sling.servlet.methods" type="String" value="GET"/>
+  <service>
+    <provide interface="javax.servlet.Servlet"/>
+  </service>
+  <reference name="builder" interface="com.day.cq.search.QueryBuilder" field="builder"/>
+  <implementation class="com.boighor.core.servlets.ContentFragmentQuery"/>
+</scr:component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boighor.core.services.impl.BaseSearch">
+  <service>
+    <provide interface="com.boighor.core.services.Search"/>
+  </service>
+  <implementation class="com.boighor.core.services.impl.BaseSearch"/>
+</scr:component>

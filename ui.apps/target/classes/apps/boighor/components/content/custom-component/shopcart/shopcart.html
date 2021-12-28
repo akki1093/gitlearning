@@ -1,0 +1,47 @@
+
+
+<sly data-sly-use.obj = "com.boighor.core.models.ShopcartModel"/>
+<a class="cartbox_active" href="#"><span class="product_qun">${obj.cartCount}</span></a>
+<!-- Start Shopping Cart -->
+<div class="block-minicart minicart__active">
+    <div class="minicart-content-wrapper">
+        <div class="micart__close">
+            <span>${obj.closeTitle}</span>
+        </div>
+        <div class="items-total d-flex justify-content-between">
+            <span>${obj.cartCount} items</span>
+            <span>${obj.subTotalTitle}</span>
+        </div>
+        <div class="total_amount text-right">
+            <span>$${obj.cartTotal}</span>
+        </div>
+        <div class="mini_action checkout">
+            <a class="checkout__btn" href="${obj.buttonHref}.html">${obj.buttonTitle}</a>
+        </div>
+        <div class="single__items">
+            <div class="miniproduct" data-sly-list.cartObj = "${obj.cartList}">
+                <div class="item01 d-flex ${(cartObj.isFirst == 'yes')?'mt--20' : ''}">
+                    <div class="thumb">
+                        <a href="${cartObj.productLInk}.html"><img src="${cartObj.productImage}" alt="product images"></a>
+                    </div>
+                    <div class="content">
+                        <h6><a href="${cartObj.productLInk}.html">${cartObj.productTitle}</a></h6>
+                        <span class="prize">$${cartObj.productPrice}</span>
+                        <div class="product_prize d-flex justify-content-between">
+                            <span class="qun">Qty: ${cartObj.productCount}</span>
+                            <ul class="d-flex justify-content-end">
+                                <li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mini_action cart">
+            <a class="cart__btn" href="${obj.bottomButtonHref}.html">${obj.bottomButtonTitle}</a>
+        </div>
+    </div>
+</div>
+<!-- End Shopping Cart -->
+

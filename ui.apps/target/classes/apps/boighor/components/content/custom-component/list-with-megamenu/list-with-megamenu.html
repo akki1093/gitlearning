@@ -1,0 +1,17 @@
+
+<sly data-sly-use.obj = "com.boighor.core.models.MegaMenuModel"/>
+<li class="drop">
+    <a href="#">${obj.navTitle}</a>
+    <div class="megamenu mega03" data-sly-list.megamenu = "${obj.megaMenuList}">
+        <ul class="item item03" data-sly-list.data = "${megamenu.megaMenuListData}">
+        	<sly data-sly-test="${dataList.index == 0}">
+            	<li class="title">${data.navMegaMenuTitle}</li>
+            </sly>
+            <sly data-sly-test="${dataList.index != 0}">
+            	<li><a href="${data.navMegaMenuLInk}.html">${data.navMegaMenuTitle}</a></li>
+            </sly>
+        </ul>
+
+    </div>
+</li>
+

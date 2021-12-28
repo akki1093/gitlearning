@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Implementation-Title: boighor - UI apps
+Content-Package-Roots: /apps/boighor
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: D1
+Implementation-Vendor-Id: com.boighor
+Content-Package-Dependencies: adobe/cq60:core.wcm.components.content:2
+ .7.0,adobe/cq60:core.wcm.components.config:2.7.0
+Content-Package-Type: application
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_221
+Content-Package-Description: UI apps package for boighor
+Content-Package-Id: com.boighor:com.boighor.boighor.ui.apps:1.0-SNAPSH
+ OT
+

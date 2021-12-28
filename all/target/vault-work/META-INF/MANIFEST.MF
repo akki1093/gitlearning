@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven
+Built-By: D1
+Build-Jdk: 16.0.2
+Implementation-Title: boighor - All
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.boighor
+Content-Package-Roots: /apps/boighor-packages,/apps/boighor-vendor-packa
+ ges
+Content-Package-Description: All content package for boighor
+Content-Package-Id: boighor:com.boighor.boighor.all:1.0-SNAPSHOT
+Content-Package-Type: application
+

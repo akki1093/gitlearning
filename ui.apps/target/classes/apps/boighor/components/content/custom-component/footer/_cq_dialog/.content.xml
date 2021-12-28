@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                type="nav">
+                <items jcr:primaryType="nt:unstructured">
+                    <footer-log-tab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Latest News"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <logo
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Can not be empty"
+                                                fieldLabel="Logo"
+                                                name="./logo"
+                                                rootPath="/content/dam/boighor/images"/>
+                                            <logo-link-url
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                fieldDescription="Links the title. Path to a content page, external URL or page anchor."
+                                                fieldLabel="Logo LInk URL"
+                                                name="./logoLInkURL"
+                                                rootPath="/content/boighor"/>
+                                            <logo-alter-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Can not be empty"
+                                                fieldLabel="Logo Alt Text"
+                                                name="./logoAlterTitle"/>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Can not be empty"
+                                                fieldLabel="Description"
+                                                name="./description"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </footer-log-tab>
+                    <footer-content-tab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Contact Us Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <inner-tabs
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Inner Tab-1"
+                                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                                type="nav">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <social-icons-tab
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Social Icons"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <social-icons-list
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Social Icons">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./socialIcons">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <column
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <type
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                                    fieldDescription="Select Icon"
+                                                                                    fieldLabel="Icon"
+                                                                                    name="./icon">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <def
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            text="Select Size"
+                                                                                            value=""/>
+                                                                                        <facebook
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            text="Facebook"
+                                                                                            value="bi bi-facebook"/>
+                                                                                        <google
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            text="Google"
+                                                                                            value="bi bi-google"/>
+                                                                                        <twitter
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            text="Twitter"
+                                                                                            value="bi bi-twitter"/>
+                                                                                        <linkedin
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            text="Linkedin"
+                                                                                            value="bi bi-linkedin"/>
+                                                                                        <youtube
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            text="Youtube"
+                                                                                            value="bi bi-youtube"/>
+                                                                                    </items>
+                                                                                </type>
+                                                                            </items>
+                                                                        </column>
+                                                                    </items>
+                                                                </field>
+                                                            </social-icons-list>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </social-icons-tab>
+                                    <footer-tags-tab
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Footer Tags"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <tags-list
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Footer Tags">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./footerTags">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <column
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <tag-title
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldDescription="Can not be empty"
+                                                                                    fieldLabel="Tag Title"
+                                                                                    name="./tagTitle"/>
+                                                                                <tag-link
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                                                    fieldDescription="Can not be empty"
+                                                                                    fieldLabel="Tag Link"
+                                                                                    name="./tagLink"
+                                                                                    rootPath="/content/boighor"/>
+                                                                            </items>
+                                                                        </column>
+                                                                    </items>
+                                                                </field>
+                                                            </tags-list>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </footer-tags-tab>
+                                </items>
+                            </inner-tabs>
+                        </items>
+                    </footer-content-tab>
+                    <copyright-tab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Copyright"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <message
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Message"
+                                                fieldLabel="Copyright Text"
+                                                name="./copyrightText"/>
+                                            <payment-image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Can not be empty"
+                                                fieldLabel="Payment Image"
+                                                name="./payment"
+                                                rootPath="/content/dam/boighor/images"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </copyright-tab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
